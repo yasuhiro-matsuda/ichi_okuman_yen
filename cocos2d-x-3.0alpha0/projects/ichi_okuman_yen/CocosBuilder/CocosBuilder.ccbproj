@@ -21,15 +21,15 @@
 	<key>generatedSpriteSheets</key>
 	<dict/>
 	<key>javascriptBased</key>
-	<true/>
-	<key>javascriptMainCCB</key>
-	<string>MainScene</string>
-	<key>needRepublish</key>
 	<false/>
+	<key>javascriptMainCCB</key>
+	<string></string>
+	<key>needRepublish</key>
+	<true/>
 	<key>onlyPublishCCBs</key>
 	<false/>
 	<key>publishDirectory</key>
-	<string>Published-iOS</string>
+	<string>../Resources/ccbi</string>
 	<key>publishDirectoryAndroid</key>
 	<string>Published-Android</string>
 	<key>publishDirectoryHTML5</key>
@@ -37,7 +37,7 @@
 	<key>publishEnabledAndroid</key>
 	<false/>
 	<key>publishEnabledHTML5</key>
-	<true/>
+	<false/>
 	<key>publishEnablediPhone</key>
 	<true/>
 	<key>publishResolutionHTML5_height</key>
@@ -47,13 +47,13 @@
 	<key>publishResolutionHTML5_width</key>
 	<integer>480</integer>
 	<key>publishResolution_</key>
-	<true/>
+	<false/>
 	<key>publishResolution_hd</key>
-	<true/>
+	<false/>
 	<key>publishResolution_ipad</key>
-	<true/>
+	<false/>
 	<key>publishResolution_ipadhd</key>
-	<true/>
+	<false/>
 	<key>publishResolution_large</key>
 	<true/>
 	<key>publishResolution_medium</key>
@@ -67,7 +67,7 @@
 	<key>publishToZipFile</key>
 	<false/>
 	<key>resourceAutoScaleFactor</key>
-	<integer>4</integer>
+	<integer>1</integer>
 	<key>resourcePaths</key>
 	<array>
 		<dict>
