@@ -1,6 +1,9 @@
 #include "HelloWorldScene.h"
+#include "CCBReader/CCBReader.h"
+#include "CCBReader/CCNodeLoaderLibrary.h"
 
 USING_NS_CC;
+USING_NS_CC_EXT;
 
 Scene* HelloWorld::createScene()
 {
@@ -48,30 +51,17 @@ bool HelloWorld::init()
     menu->setPosition(Point::ZERO);
     this->addChild(menu, 1);
 
-    /////////////////////////////
-    // 3. add your codes below...
-
-    // add a label shows "Hello World"
-    // create and initialize a label
+    // スプラッシュのccbiファイルを読み込む
+    auto nodeLoaderLibrary = NodeLoaderLibrary::getInstance();
+    CCBReader* reader = new CCBReader(nodeLoaderLibrary);
+    auto splashNode = reader->readNodeGraphFromFile("ccbi/SplashScene.ccbi");
     
-    auto label = LabelTTF::create("Hello World", "Arial", 24);
+    // 追加
+    this->addChild(splashNode, 0);
     
-    // position the label on the center of the screen
-    label->setPosition(Point(origin.x + visibleSize.width/2,
-                            origin.y + visibleSize.height - label->getContentSize().height));
+    // 開放
+    reader->release();
 
-    // add the label as a child to this layer
-    this->addChild(label, 1);
-
-    // add "HelloWorld" splash screen"
-    auto sprite = Sprite::create("HelloWorld.png");
-
-    // position the sprite on the center of the screen
-    sprite->setPosition(Point(visibleSize.width/2 + origin.x, visibleSize.height/2 + origin.y));
-
-    // add the sprite as a child to this layer
-    this->addChild(sprite, 0);
-    
     return true;
 }
 
