@@ -24,6 +24,19 @@ bool AppDelegate::applicationDidFinishLaunching() {
     // set FPS. the default value is 1.0/60 if you don't call this
     director->setAnimationInterval(1.0 / 60);
     
+    // 通常はiPhone retinaのサイズでデザインする
+    Size designSize = Size(640, 960);
+    // 端末のディスプレイサイズ
+    Size winSize = director->getWinSize();
+    CCLOG("winSize width: %4.1f, height: %4.1f", winSize.width, winSize.height);
+    // 縦長の場合は横幅は固定で縦を伸ばす
+    if (winSize.height > winSize.width * 1.5)
+    {
+        designSize.height = 640 * winSize.height / winSize.width;
+    }
+    // 全て表示するようにするので、アスペクト比がiPhone3.5インチの1.5より小さいタブレットは左右に黒帯が入って表示されることになる
+    eglView->setDesignResolutionSize(designSize.width, designSize.height, ResolutionPolicy::SHOW_ALL);
+    
     // ファイルパスを追加
     auto fileUtils = FileUtils::getInstance();
     fileUtils->addSearchPath("ccbi/");
