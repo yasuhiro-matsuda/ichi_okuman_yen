@@ -1,5 +1,5 @@
 #include "AppDelegate.h"
-#include "HelloWorldScene.h"
+#include "SplashScene.h"
 
 USING_NS_CC;
 
@@ -43,7 +43,7 @@ bool AppDelegate::applicationDidFinishLaunching() {
     fileUtils->addSearchPath("ccbi/ccbResources/");
 
     // create a scene. it's an autorelease object
-    auto scene = HelloWorld::createScene();
+    auto scene = SplashScene::createScene();
 
     // run
     director->runWithScene(scene);
