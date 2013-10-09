@@ -5,6 +5,7 @@
 
 USING_NS_CC;
 USING_NS_CC_EXT;
+USING_NS_ICHI;
 
 Scene* SplashScene::createScene()
 {
@@ -46,6 +47,6 @@ void SplashScene::gameStart(float milliSecond)
     CCLOG("Splash display time: %4.4f ms", milliSecond);
     auto scene = TitleScene::createScene();
     // 0.5秒かけてホワイトアウトしてタイトルに移動する
-    TransitionFade* fade = TransitionFade::create(0.5f, scene, Color3B::WHITE);
+    auto fade = TransitionFade::create(REPLASE_SCENE_TIME_DEFAULT, scene, Color3B::WHITE);
     Director::getInstance()->replaceScene(fade);
 }

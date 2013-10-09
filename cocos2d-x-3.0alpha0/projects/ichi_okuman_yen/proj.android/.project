@@ -123,9 +123,9 @@
 			<locationURI>COCOS2DX/extensions</locationURI>
 		</link>
 		<link>
-			<name>scripting</name>
+			<name>cocosdenshion</name>
 			<type>2</type>
-			<locationURI>COCOS2DX/scripting</locationURI>
+			<locationURI>COCOS2DX/cocosdenshion</locationURI>
 		</link>
 	</linkedResources>
 	<variableList>

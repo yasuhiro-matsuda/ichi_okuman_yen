@@ -1,7 +1,10 @@
 #include "AppDelegate.h"
 #include "SplashScene.h"
+#include "SimpleAudioEngine.h"
 
 USING_NS_CC;
+using namespace CocosDenshion;
+USING_NS_ICHI;
 
 AppDelegate::AppDelegate() {
 
@@ -40,7 +43,6 @@ bool AppDelegate::applicationDidFinishLaunching() {
     // ファイルパスを追加
     auto fileUtils = FileUtils::getInstance();
     fileUtils->addSearchPath("ccbi/");
-    fileUtils->addSearchPath("ccbi/ccbResources/");
 
     // create a scene. it's an autorelease object
     auto scene = SplashScene::createScene();
@@ -51,18 +53,18 @@ bool AppDelegate::applicationDidFinishLaunching() {
     return true;
 }
 
-// This function will be called when the app is inactive. When comes a phone call,it's be invoked too
+// ホームボタン押されたりでアプリが裏に回る時に呼ばれる
 void AppDelegate::applicationDidEnterBackground() {
     Director::getInstance()->stopAnimation();
-
-    // if you use SimpleAudioEngine, it must be pause
-    // SimpleAudioEngine::sharedEngine()->pauseBackgroundMusic();
+    // BGM・SE一時停止
+    SimpleAudioEngine::getInstance()->pauseBackgroundMusic();
+    SimpleAudioEngine::getInstance()->pauseAllEffects();
 }
 
-// this function will be called when the app is active again
+// アプリが再開された時に呼ばれる
 void AppDelegate::applicationWillEnterForeground() {
     Director::getInstance()->startAnimation();
-
-    // if you use SimpleAudioEngine, it must resume here
-    // SimpleAudioEngine::sharedEngine()->resumeBackgroundMusic();
+    // BGM・SE再開
+    SimpleAudioEngine::getInstance()->resumeBackgroundMusic();
+    SimpleAudioEngine::getInstance()->resumeAllEffects();
 }
