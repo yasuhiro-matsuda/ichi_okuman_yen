@@ -12,8 +12,8 @@ public:
     static cocos2d::Scene* createScene();
 
     virtual bool init();
-    
-    void playBGM(float milliSecond);
+    // シーン切り替え後にBGMを再生
+    virtual void onEnterTransitionDidFinish() override;
 
     CREATE_FUNC(TitleScene);
 };

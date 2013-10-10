@@ -39,14 +39,11 @@ bool TitleScene::init()
     // 開放
     reader->release();
     
-    // BGM再生(シーン切り替え時間分遅らせる)
-    this->scheduleOnce(schedule_selector(TitleScene::playBGM), REPLASE_SCENE_TIME_DEFAULT);
-
     return true;
 }
 
-void TitleScene::playBGM(float milliSecond)
+void TitleScene::onEnterTransitionDidFinish()
 {
-    CCLOG("playBGM delay time: %4.4f ms", milliSecond);
     SimpleAudioEngine::getInstance()->playBackgroundMusic(BGM_TITLE, true);
+    Layer::onEnterTransitionDidFinish();
 }

@@ -14,7 +14,7 @@ NS_ICHI_BEGIN
 // リソースのパス
 #define BGM_TITLE "bgm/491.mp3"
 
-// シーン切り替え時間(BGM再生のディレイにも使う)
+// シーン切り替え時間
 #define REPLASE_SCENE_TIME_DEFAULT 0.5f
 
 NS_ICHI_END
