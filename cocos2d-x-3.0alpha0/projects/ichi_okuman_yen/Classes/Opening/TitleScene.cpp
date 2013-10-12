@@ -2,6 +2,7 @@
 #include "CCBReader/CCBReader.h"
 #include "CCBReader/CCNodeLoaderLibrary.h"
 #include "SimpleAudioEngine.h"
+#include "PrologueScene.h"
 
 USING_NS_CC;
 USING_NS_CC_EXT;
@@ -62,5 +63,9 @@ bool TitleScene::onTouchBegan(Touch *touch, Event *event)
 {
     CCLOG("TitleScene::onTouchBegan()");
     SimpleAudioEngine::getInstance()->playEffect(SE_TOUCH_NORMAL);
+    auto scene = PrologueScene::createScene();
+    // 0.5秒かけてブラックアウトしてプロローグに移動する
+    auto fade = TransitionFade::create(REPLASE_SCENE_TIME_DEFAULT, scene, Color3B::BLACK);
+    Director::getInstance()->replaceScene(fade);
     return false;
 }

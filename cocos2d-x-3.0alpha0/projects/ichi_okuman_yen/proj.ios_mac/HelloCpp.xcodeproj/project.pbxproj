@@ -22,6 +22,7 @@
 		288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765A40DF7441C002DB57D /* CoreGraphics.framework */; };
 		2E0DDD401802E4F80010137F /* bgm in Resources */ = {isa = PBXBuildFile; fileRef = 2E0DDD3F1802E4F80010137F /* bgm */; };
 		2E0DDD441806EFB70010137F /* se in Resources */ = {isa = PBXBuildFile; fileRef = 2E0DDD431806EFB70010137F /* se */; };
+		2E0DDD4A18097CC40010137F /* PrologueScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2E0DDD4918097CC40010137F /* PrologueScene.cpp */; };
 		2ECA923217F9DED6009D4DE6 /* ccbi in Resources */ = {isa = PBXBuildFile; fileRef = 2ECA923117F9DED6009D4DE6 /* ccbi */; };
 		2ECA924718002294009D4DE6 /* SplashScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2ECA924518002294009D4DE6 /* SplashScene.cpp */; };
 		2ECA924A18005926009D4DE6 /* TitleScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2ECA924918005926009D4DE6 /* TitleScene.cpp */; };
@@ -260,6 +261,8 @@
 		2E0DDD3F1802E4F80010137F /* bgm */ = {isa = PBXFileReference; lastKnownFileType = folder; path = bgm; sourceTree = "<group>"; };
 		2E0DDD421802ED900010137F /* AppMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppMacros.h; path = ../Classes/AppMacros.h; sourceTree = "<group>"; };
 		2E0DDD431806EFB70010137F /* se */ = {isa = PBXFileReference; lastKnownFileType = folder; path = se; sourceTree = "<group>"; };
+		2E0DDD4818097CAE0010137F /* PrologueScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrologueScene.h; sourceTree = "<group>"; };
+		2E0DDD4918097CC40010137F /* PrologueScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PrologueScene.cpp; sourceTree = "<group>"; };
 		2ECA923117F9DED6009D4DE6 /* ccbi */ = {isa = PBXFileReference; lastKnownFileType = folder; path = ccbi; sourceTree = "<group>"; };
 		2ECA924518002294009D4DE6 /* SplashScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SplashScene.cpp; sourceTree = "<group>"; };
 		2ECA924618002294009D4DE6 /* SplashScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SplashScene.h; sourceTree = "<group>"; };
@@ -451,8 +454,10 @@
 			children = (
 				2ECA924518002294009D4DE6 /* SplashScene.cpp */,
 				2ECA924918005926009D4DE6 /* TitleScene.cpp */,
+				2E0DDD4918097CC40010137F /* PrologueScene.cpp */,
 				2ECA924618002294009D4DE6 /* SplashScene.h */,
 				2ECA924818005917009D4DE6 /* TitleScene.h */,
+				2E0DDD4818097CAE0010137F /* PrologueScene.h */,
 			);
 			name = Opening;
 			path = ../Classes/Opening;
@@ -753,6 +758,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				503AE10017EB989F00D1A890 /* AppController.mm in Sources */,
+				2E0DDD4A18097CC40010137F /* PrologueScene.cpp in Sources */,
 				2ECA924718002294009D4DE6 /* SplashScene.cpp in Sources */,
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
 				1AFAF8B716D35DE700DB1158 /* AppDelegate.cpp in Sources */,
