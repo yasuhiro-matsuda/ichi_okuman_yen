@@ -21,6 +21,7 @@
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765A40DF7441C002DB57D /* CoreGraphics.framework */; };
 		2E0DDD401802E4F80010137F /* bgm in Resources */ = {isa = PBXBuildFile; fileRef = 2E0DDD3F1802E4F80010137F /* bgm */; };
+		2E0DDD441806EFB70010137F /* se in Resources */ = {isa = PBXBuildFile; fileRef = 2E0DDD431806EFB70010137F /* se */; };
 		2ECA923217F9DED6009D4DE6 /* ccbi in Resources */ = {isa = PBXBuildFile; fileRef = 2ECA923117F9DED6009D4DE6 /* ccbi */; };
 		2ECA924718002294009D4DE6 /* SplashScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2ECA924518002294009D4DE6 /* SplashScene.cpp */; };
 		2ECA924A18005926009D4DE6 /* TitleScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2ECA924918005926009D4DE6 /* TitleScene.cpp */; };
@@ -258,6 +259,7 @@
 		288765A40DF7441C002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		2E0DDD3F1802E4F80010137F /* bgm */ = {isa = PBXFileReference; lastKnownFileType = folder; path = bgm; sourceTree = "<group>"; };
 		2E0DDD421802ED900010137F /* AppMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppMacros.h; path = ../Classes/AppMacros.h; sourceTree = "<group>"; };
+		2E0DDD431806EFB70010137F /* se */ = {isa = PBXFileReference; lastKnownFileType = folder; path = se; sourceTree = "<group>"; };
 		2ECA923117F9DED6009D4DE6 /* ccbi */ = {isa = PBXFileReference; lastKnownFileType = folder; path = ccbi; sourceTree = "<group>"; };
 		2ECA924518002294009D4DE6 /* SplashScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SplashScene.cpp; sourceTree = "<group>"; };
 		2ECA924618002294009D4DE6 /* SplashScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SplashScene.h; sourceTree = "<group>"; };
@@ -504,6 +506,7 @@
 		78C7DDAA14EBA5050085D0C2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				2E0DDD431806EFB70010137F /* se */,
 				2E0DDD3F1802E4F80010137F /* bgm */,
 				2ECA923117F9DED6009D4DE6 /* ccbi */,
 				1AFAF8B916D35E4900DB1158 /* CloseNormal.png */,
@@ -712,6 +715,7 @@
 				2E0DDD401802E4F80010137F /* bgm in Resources */,
 				50EF629917ECD46A001EB2F8 /* Icon-100.png in Resources */,
 				1AFAF8BC16D35E4900DB1158 /* CloseNormal.png in Resources */,
+				2E0DDD441806EFB70010137F /* se in Resources */,
 				5087E78317EB970100C73F5D /* Icon-152.png in Resources */,
 				5087E77D17EB970100C73F5D /* Default-568h@2x.png in Resources */,
 				5087E78517EB970100C73F5D /* Icon-72.png in Resources */,

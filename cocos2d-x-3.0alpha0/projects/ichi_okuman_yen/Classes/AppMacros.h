@@ -12,7 +12,8 @@
 NS_ICHI_BEGIN
 
 // リソースのパス
-#define BGM_TITLE "bgm/491.mp3"
+#define BGM_TITLE               "bgm/491.mp3"
+#define SE_TOUCH_NORMAL         "se/cursor33.wav"
 
 // シーン切り替え時間
 #define REPLASE_SCENE_TIME_DEFAULT 0.5f

@@ -43,7 +43,12 @@ bool AppDelegate::applicationDidFinishLaunching() {
     // ファイルパスを追加
     auto fileUtils = FileUtils::getInstance();
     fileUtils->addSearchPath("ccbi/");
-
+    
+    // 音声の大きさ SEが聞こえ辛いのでBGMは控えめにする
+    auto audio = SimpleAudioEngine::getInstance();
+    audio->setBackgroundMusicVolume(0.5f);
+    CCLOG("volume BGM: %1.3f, SE: %1.3f", audio->getBackgroundMusicVolume(), audio->getEffectsVolume());
+    
     // create a scene. it's an autorelease object
     auto scene = SplashScene::createScene();
 

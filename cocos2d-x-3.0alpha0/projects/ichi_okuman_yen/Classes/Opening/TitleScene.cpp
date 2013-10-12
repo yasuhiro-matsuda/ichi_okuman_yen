@@ -21,12 +21,14 @@ Scene* TitleScene::createScene()
 
 bool TitleScene::init()
 {
+    CCLOG("TitleScene::init()");
     if ( !Layer::init() )
     {
         return false;
     }
-    // BGMのプリロード
+    // BGM・SEのプリロード
     SimpleAudioEngine::getInstance()->preloadBackgroundMusic(BGM_TITLE);
+    SimpleAudioEngine::getInstance()->preloadEffect(SE_TOUCH_NORMAL);
     
     // タイトルのccbiファイルを読み込む
     auto nodeLoaderLibrary = NodeLoaderLibrary::getInstance();
@@ -39,11 +41,26 @@ bool TitleScene::init()
     // 開放
     reader->release();
     
+    // シングルタップのみ受付
+    setTouchEnabled(true);
+    setTouchMode(Touch::DispatchMode::ONE_BY_ONE);
+
     return true;
 }
 
 void TitleScene::onEnterTransitionDidFinish()
 {
-    SimpleAudioEngine::getInstance()->playBackgroundMusic(BGM_TITLE, true);
+    CCLOG("TitleScene::onEnterTransitionDidFinish()");
     Layer::onEnterTransitionDidFinish();
+
+    SimpleAudioEngine::getInstance()->playBackgroundMusic(BGM_TITLE, true);
+
+    
+}
+
+bool TitleScene::onTouchBegan(Touch *touch, Event *event)
+{
+    CCLOG("TitleScene::onTouchBegan()");
+    SimpleAudioEngine::getInstance()->playEffect(SE_TOUCH_NORMAL);
+    return false;
 }
