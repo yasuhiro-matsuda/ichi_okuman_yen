@@ -14,14 +14,23 @@ class PrologueScene
 {
 public:
     PrologueScene();
-    virtual ~PrologueScene() {};
+    virtual ~PrologueScene();
+    
+    // 処理の状態
+    enum State {
+        State_TouchIgnore,
+        State_StartAnimationEnd,
+        State_TextStartAnimation,
+        State_TextStartAnimationEnd,
+        State_TextEndAnimation,
+    };
     
     static cocos2d::Scene* createScene();
     
     virtual bool init() override;
     // シーン切り替え後にBGMを再生
     virtual void onEnterTransitionDidFinish() override;
-    // タップでゲーム開始させる
+    // タップでテキストを更新する
     virtual bool onTouchBegan(cocos2d::Touch* touch, cocos2d::Event* event) override;
     // 開始のアニメーション
     void animationStart();
@@ -41,6 +50,13 @@ public:
     CREATE_FUNC(PrologueScene);
     
 private:
+    // 現在の処理状態
+    State _state;
+    // メッセージのインデックス
+    unsigned int _messageIndex;
+    // メッセージの配列
+    cocos2d::Array* _messageArray;
+    // メッセージラベル
     cocos2d::LabelTTF* _messageTTF;
     cocos2d::extension::CCBAnimationManager* _animationManager;
 };
